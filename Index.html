@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de André (Fe) — estudante de Ciência da Computação. Projetos em Java, JavaScript, Python, HTML e CSS.">
+    <meta name="author" content="André (Fe)">
+    <meta name="theme-color" content="#0d1117">
+    <title>Fe | Portfólio</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Open Graph básico -->
+    <meta property="og:title" content="Fe | Portfólio">
+    <meta property="og:description" content="Portfólio de André (Fe) — estudante de Ciência da Computação e desenvolvedor em formação.">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+    <div id="loader" aria-hidden="true">
+        <div class="spinner" aria-hidden="true"></div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav class="navbar" aria-label="Navegação principal">
+            <h1 class="logo">Fe.dev</h1>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+            <ul id="primary-navigation" class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- ===== HERO ===== -->
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 id="hero-heading">Olá, eu sou <span>André (Fe)</span></h2>
+                    <p>Estudante de Ciência da Computação apaixonado por tecnologia e desenvolvimento.</p>
+                    <div class="hero-buttons">
+                        <a href="#projetos" class="btn primary">Ver Projetos</a>
+                        <a href="#contato" class="btn secondary">Fale comigo</a>
+                    </div>
+                </div>
+
+                <div class="hero-image" aria-hidden="false">
+                    <img src="main.jpg" alt="Retrato de André (Fe)" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOBRE ===== -->
+        <section id="sobre" class="about" aria-labelledby="sobre-heading">
+            <h3 id="sobre-heading">Sobre Mim</h3>
+            <p>Atualmente no 3º período de Ciência da Computação. Estudo Java, JavaScript, Python, HTML e CSS. Busco crescimento profissional e evolução pessoal diariamente.</p>
+        </section>
+
+        <!-- ===== HABILIDADES ===== -->
+        <section id="habilidades" class="skills" aria-labelledby="skills-heading">
+            <h3 id="skills-heading">Minhas Habilidades</h3>
+            <div class="skills-container" role="list">
+                <div class="skill-card" role="listitem" aria-label="Java">
+                    <i class="devicon-java-plain colored" aria-hidden="true"></i>
+                </div>
+
+                <div class="skill-card" role="listitem" aria-label="JavaScript">
+                    <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+                </div>
+
+                <div class="skill-card" role="listitem" aria-label="Python">
+                    <i class="devicon-python-plain colored" aria-hidden="true"></i>
+                </div>
+
+                <div class="skill-card" role="listitem" aria-label="HTML5">
+                    <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+                </div>
+
+                <div class="skill-card" role="listitem" aria-label="CSS3">
+                    <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJETOS ===== -->
+        <section id="projetos" class="projects" aria-labelledby="projects-heading">
+            <h3 id="projects-heading">Projetos</h3>
+            <div class="projects-container">
+                <article class="project-card">
+                    <h4>Projeto 1</h4>
+                    <p>Descrição breve do projeto.</p>
+                    <a href="https://github.com/Fe403" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                </article>
+
+                <article class="project-card">
+                    <h4>Projeto 2</h4>
+                    <p>Descrição breve do projeto.</p>
+                    <a href="https://github.com/Fe403" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== CONTATO ===== -->
+        <section id="contato" class="contact" aria-labelledby="contact-heading">
+            <h3 id="contact-heading">Contato</h3>
+            <p>Email: <a href="mailto:andrefellipe676@gmail.com">andrefellipe676@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/Fe403" target="_blank" rel="noopener noreferrer">github.com/Fe403</a></p>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 Fe — Todos os direitos reservados.</p>
+    </footer>
+
+    <button id="backToTop" aria-label="Voltar ao topo">↑</button>
+    <div id="particles" aria-hidden="true"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
