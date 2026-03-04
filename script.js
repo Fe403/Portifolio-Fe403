@@ -90,13 +90,43 @@ window.addEventListener("load", () => {
         }, 500);
     }
 });
-// ===== PARALLAX FOTO =====
+// ===== PARALLAX E ANIMACAO DO HERO ===== 
 const heroImage = document.querySelector(".hero-image img");
 if (heroImage) {
-    window.addEventListener("mousemove", (e) => {
-        const x = (window.innerWidth / 2 - e.pageX) / 30;
-        const y = (window.innerHeight / 2 - e.pageY) / 30;
-        heroImage.style.transform = `translate(${x}px, ${y}px)`;
+    // Animacao de entrada quando carrega
+    window.addEventListener("load", () => {
+        heroImage.style.animation = "slideInUp 0.8s ease-out";
+    });
+
+    // Parallax com mouse
+    let isNearHero = false;
+    const heroSection = document.querySelector(".hero");
+
+    // Detectar se mouse esta perto do hero
+    document.addEventListener("mousemove", (e) => {
+        const heroRect = heroSection.getBoundingClientRect();
+        const distanceFromHero = Math.min(
+            Math.abs(e.pageY - (heroRect.top + window.scrollY)),
+            Math.abs(e.pageX - (heroRect.left + window.innerWidth / 2))
+        );
+
+        isNearHero = distanceFromHero < 400;
+
+        if (isNearHero) {
+            const x = (window.innerWidth / 2 - e.pageX) / 40;
+            const y = (window.innerHeight / 2 - e.pageY) / 40;
+            heroImage.style.transform = `translate(${x}px, ${y}px) scale(1.02)`;
+            heroImage.style.filter = "brightness(1.1)";
+        } else {
+            heroImage.style.transform = "translate(0, 0) scale(1)";
+            heroImage.style.filter = "brightness(1)";
+        }
+    });
+
+    // Reset ao sair do mouse
+    document.addEventListener("mouseleave", () => {
+        heroImage.style.transform = "translate(0, 0) scale(1)";
+        heroImage.style.filter = "brightness(1)";
     });
 }
 
